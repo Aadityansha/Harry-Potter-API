@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PotterHead API - Docs</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="shortcut icon" href="/favicon/icon-192.png" type="image/x-icon">
+    <style>
+      pre{
+        max-height: 400px;
+        width: 80vw;
+      }
+      .response{
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+            {{>Header}}
+            <h1 class="mt-3" style="margin-left: 20px;">Documentation</h1>
+            <div class="content container">
+                      <br>
+                    <br>
+                    <h2 class="fs-2">Endpoints</h2>
+                    <p class="fs-4">PotterHead API has 3 endpoints:</p>
+                    <ul>
+                              <li>
+                                <p class="fs-5">Characters - <code>/api/characters</code>, This endpoint retrives all characters and their dertails</p>
+                                <a href="/api/characters" target="_blank" class="btn btn-primary">Check Out</a>
+                              </li>
+                              <br>
+                              <li>
+                                <p class="fs-5">Spells - <code>/api/spells</code>, This endpoint retrives all spells and their usage.</p>
+                                 <a href="/api/spells" target="_blank" class="btn btn-primary">Check Out</a>  
+                              </li>
+                              <br>
+                              <li>
+                                <p class="fs-5">Potions - <code>/api/potions</code>, This endpoint retrives all magical potions and their incredients.</p>
+                                 <a href="/api/potions" target="_blank" class="btn btn-primary">Check Out</a>
+                              </li>
+                    </ul>
+                    <h2 class="fs-2">Example responses</h2>
+                    <div class="response">
+                    <h3 class="fs-3">Characters</h3>
+                    <pre class="language-json"><code>
+[
+  {
+  "_id": "623f29b54c1797bb212c2c9e",
+  "Name": "Harry James Potter",
+  "Gender": "Male",
+  "Job": "Student",
+  "House": "Gryffindor",
+  "Wand": "11'  holly  phoenix feather",
+  "Patronus": "stag",
+  "Species": "Human",
+  "BloodStatus": "unknown",
+  "HairColour": "unknown",
+  "EyeColour": "unknown",
+  "Loyalty": "Albus Dumbledore | Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry",
+  "Skills": "Parseltongue| Defence Against the Dark Arts | Seeker",
+  "Birth": "31 July 1980",
+  "Death": ""
+  },
+  {
+  "_id": "623f3da29d9ac5bedcac798f",
+  "Name": "Ronald Bilius Weasley",
+  "Gender": "Male",
+  "Job": "Student",
+  "House": "Gryffindor",
+  "Wand": "12' ash unicorn tail hair",
+  "Patronus": "jack russell terrier",
+  "Species": "Human",
+  "Loyalty": "Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry",
+  "Skills": "Wizard chess | Quidditch goalkeeping",
+  "Birth": "1 March 1980",
+  "Death": ""
+  },
+  {
+  "_id": "623f3e596e1f92015c87bc13",
+  "Name": "Hermione Jean Granger",
+  "Gender": "Female",
+  "Job": "Student",
+  "House": "Gryffindor",
+  "Wand": "10¾'  vine wood dragon heartstring",
+  "Patronus": "otter",
+  "Species": "Human",
+  "Loyalty": "Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry",
+  "Skills": "Almost everything",
+  "Birth": "19 September, 1979",
+  "Death": ""
+  },
+  {
+  "_id": "623f3ed9fb137c2ece175259",
+  "Name": "Albus Percival Wulfric Brian Dumbledore",
+  "Gender": "Male",
+  "Job": "Headmaster",
+  "House": "Gryffindor",
+  "Wand": "15' elder thestral tail hair core",
+  "Patronus": "phoenix",
+  "Species": "Human",
+  "Loyalty": "Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry",
+  "Skills": "Considered by many to be one of the most powerful wizards of his time",
+  "Birth": "Late August 1881",
+  "Death": "30 June, 1997"
+  },
+  ...
+]
+                    </code></pre>
+                    <br />
+                    <h3 class="fs-3">Spells</h3>
+                    <pre class="language-json">
+                      <code>
+[
+  {
+  "_id": "62418a1ab73c66ec530f4ea7",
+  "Name": "Summoning Charm",
+  "Incantation": "Accio",
+  "Type": "Charm",
+  "Effect": "Summons an object",
+  "Light": "None"
+  },
+  {
+  "_id": "62418a31b73c66ec530f4ea9",
+  "Name": "Age Line",
+  "Incantation": "Unknown",
+  "Type": "Charm",
+  "Effect": "Prevents people above or below a certain age from access to a target",
+  "Light": "Blue"
+  },
+  ...
+]
+                      </code>
+                    </pre>
+                    <br />
+                    <h3 class="fs-3">Potions</h3>
+                    <pre class="language-json">
+                      <code>
+[
+  {
+  "_id": "624186890c011dbf2335e308",
+  "Name": "Ageing Potion",
+  "Effect": "Ages drinker temporarily",
+  "Characteristics": "Green"
+  },
+  {
+  "_id": "624186c50c011dbf2335e30a",
+  "Name": "Amortentia",
+  "Effect": "Love Potion that causes a powerful infatuation or obsession in the drinker",
+  "Characteristics": "Mother-of-pearl sheen, Spiralling steam, Scent is multi-faceted and varies based on what the person likes"
+  },
+  {
+  "_id": "624187fa0c011dbf2335e312",
+  "Name": "Antidote to Veritaserum",
+  "Effect": "Counters the effect of Veritaserum",
+  "Characteristics": ""
+  },
+...
+]
+                      </code>
+                    </pre>
+                    </div>
+                    <br><br>
+                    <div class="alert alert-danger" role="alert">
+                    Notice!! PotterHead API is build with a Harry Potter dataset provided of kaggle
+                    </div>
+            </div>
+            <script src="/bootstrap/js/bootstrap.js"></script>
+            <script src="/js/prism.js"></script>
+  </body>
+</html>
